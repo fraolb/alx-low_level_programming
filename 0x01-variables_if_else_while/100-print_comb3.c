@@ -25,23 +25,20 @@
 
 int main(void)
 {
-	int i, j, k;
+	int d, j;
 
-	i = 0;
-
-	while (i < 100)
+	for (d = 0; d <= 8; d++)
 	{
-		j = i % 10; /* singles digit */
-		k = i / 10; /* doubles digit *
-
-		if (k < j)									{											putchar(k + '0');
-			putchar(j + '0');
-													if (i < 89)									{											putchar(44);									putchar(32);
-			}																			}
-
-		i++;
-
-											}
+		for (j = 1; j <= 9; j++)
+		{
+			if (d < j)									{											putchar(d + '0');
+				putchar(j + '0');																		if (d != 8 || j != 9)								{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+		}
+	}
 	putchar('\n');
 
 	return (0);
