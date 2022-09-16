@@ -1,26 +1,36 @@
 #include "main.h"
-#include <unistd.h>
+void print_integer(int m);
 
 /**
- * print_most_numbers - check main
- * Description: Write a function that prints the numbers, from 0 to 9
+ * print_number - a function that prints an integer.
+ * @n: An input integer
  * Return: Nothing
  */
-
-void print_most_numbers(void)
+void print_number(int n)
 {
-        int c;
+	if (n == 0)
+		_putchar('0');
+	else if (n < 0)
+	{
+		_putchar('-');
+		print_integer(n * -1);
+	}
+	else
+		print_integer(n);
+}
 
-        for (c = 0; c <= 9; c++)
-        {
-              if (c == 2 || c == 4)
-              {
-                  continue;
-              }
-              else
-              {
-                  _putchar(c + '0');
-              }
-        }
-        _putchar('\n');
+/**
+ * print_integer - A function to priting n
+ * @m: an input unsigned integer
+ * Return: Nothing
+ */
+void print_integer(int m)
+{
+	int i = 1000000000;
+
+	for (; i >= 1; i /= 10)
+		if (m / i != 0)
+		{
+			_putchar((m / i) % 10 + '0');
+		}
 }
