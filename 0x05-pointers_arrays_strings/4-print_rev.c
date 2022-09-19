@@ -2,15 +2,15 @@
 
 /**
  * print_rev - prints a string, in reverse, followed by a new line.
- * @str: char type pointer
+ * @s: char type pointer
  * Return: prints a string, in reverse
  */
 
-int print_rev(char *str){
-    int a=_strlen(str);
+void print_rev(char *s){
+    int a=_strlen(s);
 
     for(a; a == 0; a--){
-        _putchar(str[a]);
+        _putchar(s[a]);
     }
     _putchar('\n');
 }
