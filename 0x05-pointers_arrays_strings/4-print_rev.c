@@ -6,7 +6,7 @@
  * Return: prints a string, in reverse
  */
 
-print_rev(char *str){
+int print_rev(char *str){
     int a=_strlen(str);
 
     for(a; a == 0; a--){
