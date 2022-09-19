@@ -2,16 +2,16 @@
 
 /**
  * _puts - prints a string, followed by a new line, to stdout
- * @s: char type pointer
+ * @str: char type pointer
  * Return: length of string
  */
 
-int _puts(char *s){
+int _puts(char *str){
     int i;
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		_putchar(s[i]);
+		_putchar(str[i]);
 	}
 	_putchar('\n');
 }
