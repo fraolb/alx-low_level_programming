@@ -7,8 +7,9 @@
  */
 
 char _strcat(char *dest, char *src)
-{
-    *dest = *src;
+{   
+    while(*(++dest));
+    while(*(dest++) = *(src++));
 
     return (dest);
 }
